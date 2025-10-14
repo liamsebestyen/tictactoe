@@ -1,0 +1,67 @@
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: 3px solid #2c3e50;
+  background-color: #ecf0f1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover:not(:disabled) {
+  background-color: #d5dbdb;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cell:disabled {
+  cursor: not-allowed;
+}
+
+.cell-x {
+  color: #e74c3c;
+  animation: popIn 0.3s ease;
+}
+
+.cell-o {
+  color: #3498db;
+  animation: popIn 0.3s ease;
+}
+
+.winning-cell {
+  background-color: #2ecc71 !important;
+  animation: pulse 0.6s ease-in-out infinite;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .cell {
+    font-size: 2rem;
+    border-width: 2px;
+  }
+}
