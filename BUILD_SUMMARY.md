@@ -168,3 +168,4 @@ The current implementation is a complete, working two-player game that fulfills 
 The Tic Tac Toe project is **fully functional** and ready to use. All core requirements have been implemented with a modern, polished UI and smooth user experience. The code is well-organized, documented, and follows React best practices.
 
 To start playing, just upgrade Node.js to 20.19+ or 22.12+ and run `npm run dev`!
+
